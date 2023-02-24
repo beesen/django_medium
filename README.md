@@ -12,7 +12,7 @@ DJANGO_DATABASE_PORT='5432'
 `
 
 settings.py
-`
+`python
 import environ
 
 env = environ.Env()
