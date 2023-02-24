@@ -1,17 +1,22 @@
 # django_medium
-# Get Started with Postgres + Django => https://medium.com/@jaredblackjcb/get-started-with-postgres-django-8f79d78fc3771
-create file called .env
-.env
-```text
-# Database Connection Info
-DJANGO_DATABASE_NAME='your_database_name'
-DJANGO_DATABASE_USER='your_user'
-DJANGO_DATABASE_PASSWORD='your_password'
-DJANGO_DATABASE_HOST='localhost'
-DJANGO_DATABASE_PORT='5432'
+# How to set up environment variables in Django
+Install django-environ
+```cmd
+$ pip install django-environ
 ```
+Create .env file in the root directory
+file: .env
+```text
+SECRET_KEY=django_secret_key
+DATABASE_NAME=your_database_name
+DATABASE_USER=your_user
+DATABASE_PASSWORD=your_password
+DATABASE_HOST=localhost
+DATABASE_PORT=5432
+```
+Add your .env file to .gitignore
 
-settings.py
+file: settings.py
 ```python
 import environ
 
@@ -30,4 +35,10 @@ DATABASES = {
         'PORT': env('DJANGO_DATABASE_PORT', default='5432'),
     }
 }
+```
+In terminal:
+```cmd
+pip install psycopg2
+install postgresql on Windows
+createdb your_database_name -U postgres
 ```
