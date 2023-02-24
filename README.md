@@ -5,7 +5,8 @@ Install django-environ
 $ pip install django-environ
 ```
 Create .env file in the root directory
-file: .env
+
+File: .env
 ```text
 SECRET_KEY=django_secret_key
 DATABASE_NAME=your_database_name
@@ -16,7 +17,7 @@ DATABASE_PORT=5432
 ```
 Add your .env file to .gitignore
 
-file: settings.py
+File: settings.py
 ```python
 import environ
 
@@ -35,10 +36,4 @@ DATABASES = {
         'PORT': env('DJANGO_DATABASE_PORT', default='5432'),
     }
 }
-```
-In terminal:
-```cmd
-pip install psycopg2
-install postgresql on Windows
-createdb your_database_name -U postgres
 ```
