@@ -2,17 +2,17 @@
 # Get Started with Postgres + Django => https://medium.com/@jaredblackjcb/get-started-with-postgres-django-8f79d78fc3771
 create file called .env
 .env
-`
+```text
 # Database Connection Info
 DJANGO_DATABASE_NAME='your_database_name'
 DJANGO_DATABASE_USER='your_user'
 DJANGO_DATABASE_PASSWORD='your_password'
 DJANGO_DATABASE_HOST='localhost'
 DJANGO_DATABASE_PORT='5432'
-`
+```
 
 settings.py
-`python
+```python
 import environ
 
 env = environ.Env()
@@ -30,4 +30,4 @@ DATABASES = {
         'PORT': env('DJANGO_DATABASE_PORT', default='5432'),
     }
 }
-`
+```
